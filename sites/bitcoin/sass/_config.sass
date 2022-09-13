@@ -1,0 +1,104 @@
+// USER VARIABLES SECTION
+
+
+$accent: #3671E9 // Accent Color
+$textcolor: #E0E0E0 // Text Color
+$dark-text: #0D0D2B
+$bg-color: #0D0D2B
+$bg-color-white: #FAFBFF
+
+$white: #fff
+$lineheight: 1.65 // Document Line Height
+$userfont: rubik, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+//-- размеры экрана
+$xl: 1210px
+$large: 992px
+$medium: 766px
+$small: 478px
+$tiny: 320px
+
+@mixin breakpoint($bp)
+   @media screen and ( max-width: $bp)
+      @content
+//--
+
+
+// Bootstrap compatible gutter variable => $gutter
+// $grid-gutter-width: 30px
+// $gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('rubik', normal, 400, '../fonts/Rubik-Regular.ttf')
+@include font('rubik', normal, 500, '../fonts/Rubik-Medium.ttf')
+@include font('rubik', normal, 700, '../fonts/Rubik-Bold.ttf')
+
+// GENERAL DOCUMENT STYLES
+html
+	height: 100%
+	font-size: 10px
+	overflow: hidden
+	@include breakpoint($xl)
+		font-size: 9px
+	@include breakpoint($large)
+		font-size: 8.5px
+	@include breakpoint($medium)
+		font-size: 7.5px
+	@include breakpoint($small)
+		font-size: 6.5px
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	height: 100%
+	font-family: $userfont
+	font-size: 1.6rem
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	overflow-y: auto
+	box-sizing: content-box
+	scroll-behavior: smooth
+	&::-webkit-scrollbar
+		width: 0
+	@include breakpoint($medium)
+		flex-direction: column
+		font-size: 2rem
+	@include breakpoint($small)
+		font-size: 2.2rem
+
+a
+	color: #fff
+	text-decoration: none
+
+.hidden
+	overflow: hidden

@@ -1,0 +1,659 @@
+@import config
+
+.wrap
+   max-width: 144rem
+   padding-left: 12rem
+   padding-right: 12rem
+   margin: 0 auto
+   background-color: $bg-color
+   @include breakpoint($large)
+      padding-left: 6rem
+      padding-right: 6rem
+   @include breakpoint($medium)
+      padding-left: 4.5rem
+      padding-right: 4.5rem
+   @include breakpoint($small)
+      padding-left: 3.8rem
+      padding-right: 3.8rem
+   &_white
+      background-color: $bg-color-white
+   &_gradient
+      padding-top: 8.8rem
+      padding-bottom: 8.8rem
+      background-image: linear-gradient(180deg, #2B076E, #0D0D2B)
+// -- wrapper
+
+// навигация
+.nav-menu
+   display: flex
+   justify-content: space-between
+   align-items: center
+   position: relative
+
+   &-list
+      display: flex
+      align-items: center
+      list-style-type: none
+      margin: 0
+      padding: 0
+      @include breakpoint($medium)
+         // display: none
+         flex-direction: column
+         align-items: flex-start
+         width: 25rem
+         height: 100vh
+         padding: 7rem 0 0 5rem
+         background-color: darken($accent, 20%)
+         position: fixed
+         top: 0
+         right: 0
+         transform: translateX(35rem)
+         transition: transform .5s linear
+      & li
+         padding-right: 3.2rem
+         @include breakpoint($large)
+            padding-right: 2.4rem
+         @include breakpoint($medium)
+            padding-bottom: 2rem
+            padding-right: 0
+         &:last-child
+            padding-right: 0
+            @include breakpoint($medium)
+               padding-bottom: 0
+
+
+         &:nth-last-child(2)
+            padding: 0 2.4rem
+            margin-right: 2.4rem
+            font-weight: 500
+            border-right: 1px #828291 solid
+            @include breakpoint($medium)
+               padding: 0
+               padding-bottom: 2rem
+               margin-right
+               border: none
+   &__link
+      font-size: 1.6rem
+      transition: color .2s ease
+      @include breakpoint($medium)
+         font-size: 2.2rem
+
+      &:hover
+         color: lighten($accent, 10%)
+
+#burger-checkbox
+   display: none
+   margin: 0
+   width: 3.6em
+   height: 3.6em
+   font-size: 1.3rem
+   position: absolute
+   top: 4rem
+   right: 4.5rem
+   opacity: 0 /* hide input */
+   z-index: 10 /* top of the menu */
+   transform: translateX(0)
+   transition: transform .5s linear
+   @include breakpoint($medium)
+      display: block
+
+.nav-menu__burger
+   display: none
+   flex-direction: column
+   align-items: flex-end
+   justify-content: center
+   width: 3.6em
+   height: 3.6em
+   font-size: 1.3rem
+   position: absolute
+   top: 0
+   right: 0
+   @include breakpoint($medium)
+      display: flex
+
+   span
+      width: 100%
+      height: 2px
+      // background: rgba($white, .7)
+      background: rgba($white, 1)
+      border-radius: 4px
+      z-index: 1
+      transition: all .3s linear
+   span + span
+      margin-top: 5px
+   #span1
+      width: 37%
+      transform-origin: 4px 0px
+   #span2
+      width: 72%
+      transform-origin: 4px 0px
+   &:hover span
+      background: rgba($white, 1)
+
+#span3
+   transform-origin: bottom right
+
+#burger-checkbox:checked
+   transform: translateX(-30rem)
+
+#burger-checkbox:checked ~
+   .header
+      transform: translateX(-30rem)
+      .nav-menu
+         &__burger #span1
+            width: 100%
+            transform: rotate(-46deg) translate(-8px, 20px)
+         &__burger #span2
+            opacity: 0
+         &__burger #span3
+            transform: rotate(45deg) translate(5px, 6px)
+         &-list
+            // background-color: rgba($dark-text, 1)
+            transform: translateX(35rem)
+
+
+// .menu	input:checked ~ .menu__nav
+//    visibility: visible
+//    background-color: rgba($dark-text, 1)
+//    .menu__nav-item
+//       opacity: .8
+//-- навигация
+
+// контент
+
+.header
+   width: 100%
+   padding-top: 6rem
+   @include breakpoint($medium)
+      padding-top: 4rem
+      transform: translateX(0)
+      transition: transform .5s linear
+.logo
+   display: block
+   width: 13.3em
+   height: 4em
+   font-size: 1rem
+   margin-right: 10px
+   &-img
+      width: 100%
+      height: 100%
+
+button.btn, a.btn
+   display: inline-block
+   font-size: 1.8rem
+   font-weight: 500
+   padding: .82em 1.35em
+   background-color: $accent
+   color: $white
+   border-radius: 3.2rem
+   border: none
+   transition: all .3s ease
+   box-sizing: border-box
+   // @include breakpoint($large)
+   //    font-size: 1.1rem
+   //    padding: .1em 1.35em
+   &:hover
+      cursor: pointer
+      background-color: darken($accent, 20%)
+      box-shadow: 0 0 15px 5px lighten($accent, 1%)
+   &_nav
+      padding: .85em 2em
+      font-size: 1.6rem
+      @include breakpoint($large)
+         padding: .65em 1.8em
+      @include breakpoint($medium)
+         font-size: 2.2rem
+   &_white
+      background-color: $white
+      color: $dark-text
+      &:hover
+         color: $white
+         box-shadow: 0 0 15px 5px lighten($accent, 10%)
+
+.title
+   margin: 0
+   font-size: 4rem
+   font-weight: 700
+   line-height: 1.5
+   color: $white
+   &_h3
+      font-size: 3.2rem
+   &_dark
+      color: $dark-text
+
+.header-content
+   padding: 5.1rem 0 10.1rem
+   display: flex
+   justify-content: space-between
+   align-items: center
+   @include breakpoint($large)
+      padding-bottom: 8rem
+   @include breakpoint($medium)
+      padding: 9rem 0
+
+
+.proposition
+   max-width: 59rem
+   &__discount
+      display: inline-block
+      margin: 0
+      padding: .6rem
+      padding-right: 1rem
+      color: $white
+      letter-spacing: .01em
+      background-color: rgba($white, .1)
+      border-radius: 3.2rem
+      @include breakpoint($small)
+         font-size: .9em
+      & span
+         font-weight: 500
+         padding: .4rem 1.6rem
+         margin-right: 1rem
+         text-transform: uppercase
+         color: $dark-text
+         letter-spacing: .04em
+         background-color: $white
+         border-radius: 3.2rem
+         @include breakpoint($small)
+            font-size: .86em
+            letter-spacing: .02em
+            margin-right: .5rem
+   &__title
+      margin: 2.4rem 0
+      font-size: 6.4rem
+      font-weight: 700
+      color: $white
+      line-height: 1.2
+      @include breakpoint(1350px)
+         font-size: 5.8rem
+      @include breakpoint($xl)
+         font-size: 5rem
+      @include breakpoint($large)
+         font-size: 4.8rem
+      @include breakpoint($medium)
+         margin: 2.4rem 0 3rem
+
+   &__text
+      margin-bottom: 3.2rem
+      letter-spacing: .01em
+      @include breakpoint($medium)
+         margin-bottom: 4rem
+   &-img
+      max-width: 60.4em
+      max-height: 68.5em
+      @include breakpoint(1350px)
+         max-height: 50.5rem
+      @include breakpoint($xl)
+         max-height: 42.5rem
+      @include breakpoint($large)
+         max-height: 36.5rem
+      @include breakpoint($medium)
+         display: none
+
+.numbers
+   display: flex
+   justify-content: space-between
+   padding-top: 10rem
+   padding-bottom: 12.8rem
+   @include breakpoint($large)
+      padding-top: 7.5rem
+      padding-bottom: 7.5rem
+   @include breakpoint($medium)
+      flex-direction: column
+      padding-top: 4.5rem
+      padding-bottom: 4.5rem
+
+   &__item
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      max-width: 33.4rem
+      height: 9.2rem
+      padding-left: 10.4rem
+      position: relative
+      @include breakpoint($medium)
+         margin-bottom: 7.5rem
+
+      &::before
+         content: ''
+         display: block
+         width: 8rem
+         height: 8rem
+         background-color: rgba($white, .1)
+         border-radius: 100%
+         background-repeat: no-repeat
+         background-position: center
+         background-size: 55%
+         position: absolute
+         top: .5rem
+         left: .6rem
+      &_currency::before
+         background-image: url(../images/icon_diagram.svg)
+      &_person::before
+         background-image: url(../images/icon_hum.svg)
+      &_earth::before
+         background-image: url(../images/icon_earth.svg)
+
+      & span
+         font-size: 4rem
+         font-weight: 700
+         text-transform: uppercase
+         color: $white
+         line-height: 1
+   &__text
+      margin: 0
+
+.hashrate
+   margin: 0 auto
+   max-width: 62.2rem
+   padding: 10rem 0 22rem
+   text-align: center
+   @include breakpoint($medium)
+      padding: 6rem 0 15rem
+
+.calc-head
+   display: flex
+   align-items: center
+   max-width: 94.2rem
+   margin: 0 auto
+   padding: 6.2rem 4.8rem 5.5rem
+   background-color: $bg-color-white
+   border-radius: 1.6rem 1.6rem 0 0
+   @include breakpoint($medium)
+      flex-wrap: wrap
+      padding: 6.2rem 3.4rem 5.5rem
+      justify-content: space-between
+   &__input, &__select
+      font-size: 2rem
+      background-color: $bg-color-white
+      color: #0D0D2B
+      border: none
+      border-bottom: 1px #E0E0E0 solid
+      @include breakpoint($medium)
+         font-size: 1.1em
+   &__input
+      flex-grow: 1
+      @include breakpoint($medium)
+         width: 100%
+         margin-bottom: 4rem
+      &::placeholder
+         color: #0D0D2B
+   &__select
+      flex-basis: 20rem
+      margin-right: 4.8rem
+      margin-left: 4.8rem
+      @include breakpoint($medium)
+         margin-left: 0
+      @include breakpoint($small)
+         flex-basis: 7.5rem
+   &__btn
+      flex-basis: 14.6rem
+      @include breakpoint($small)
+         flex-basis: 7.5rem
+
+.calc-foot
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   max-width: 94.2rem
+   min-height: 12rem
+   padding: 4.8rem
+   margin: 0 auto
+   background-color: $white
+   @include breakpoint($small)
+      padding: 4rem
+   &__title
+      margin: 0
+      font-weight: 500
+      color: $accent
+      text-transform: uppercase
+   &__total
+      margin: 0
+      font-weight: 700
+      font-size: 3.2rem
+      color: $dark-text
+      & span
+         color: $accent
+   &__description
+      margin: 0
+      color: #828282
+
+.currency-title
+   display: block
+   max-width: 74.1rem
+   margin: 0 auto
+   padding: 10rem 0 6.4rem
+   text-align: center
+
+.currency
+   display: flex
+   justify-content: space-between
+   text-align: center
+   padding-bottom: 10rem
+   @include breakpoint($medium)
+      flex-direction: column
+      align-items: center
+   &__elem
+      padding: 4.8rem 2.4rem
+      margin-right: 1rem
+      flex-basis: 37rem
+      height: 43.3rem
+      background-color: $white
+      border-radius: 1.6rem
+      box-sizing: border-box
+      box-shadow: 0 2px 5px $bg-color
+      transition: all .4s linear
+      @include breakpoint($medium)
+         max-width: 40rem
+         margin-bottom: 5rem
+
+      &:last-child
+         margin-right: 0
+         @include breakpoint($medium)
+            margin-bottom: 0
+      &:hover
+         background-color: #2B076E
+         .currency__title
+            color: $white
+         .currency__text
+            color: $white
+         .currency__btn
+            width: 20.5rem
+            font-size: 1.8rem
+            background-color: $accent
+            color: rgba(#fff, 1)
+            position: relative
+            &::after
+               position: absolute
+               top: 0
+               right: 0
+               background-color: $white
+               border: none
+               transform: scale(.55)
+
+   &__img
+      margin: 0 auto
+      width: 8rem
+      height: 8rem
+      background-size: 50%
+      background-position: center
+      background-repeat: no-repeat
+      border-radius: 50%
+      &_bitcoin
+         background-image: url(../images/icon_bit.svg)
+         background-color: #F9AA4B
+      &_eth
+         background-image: url(../images/icon_eth.svg)
+         background-color: #1181E8
+      &_lite
+         background-image: url(../images/icon_lite_2.svg)
+         background-color: #59C19C
+         background-size: 44%
+
+   &__title
+      display: inline-block
+      margin-top: 4.8rem
+      margin-bottom: 1.6rem
+      color: $dark-text
+      position: relative
+      transition: color .4s linear
+      &::after
+         font-weight: 500
+         font-size: 1.8rem
+         text-transform: uppercase
+         position: absolute
+         top: 1.15rem
+         right: -4.5rem
+         opacity: .7
+      &_bitcoin::after
+         content: 'btc'
+      &_eth::after
+         content: 'eth'
+      &_lite::after
+         content: 'lth'
+
+   &__text
+      display: inline-block
+      max-height: 5.6rem
+      margin-bottom: 2.5rem
+      color: #828282
+      line-height: 2.8rem
+      letter-spacing: 0.01em
+      transition: color .4s linear
+      overflow: hidden
+
+      // text-overflow: ellipsis
+
+      // &:last-child
+      //    background-color: #333
+
+   .currency__btn
+      width: 10.5rem
+      font-size: 1.8rem
+      margin: 0 auto
+      text-align: left
+      color: rgba(#fff, 0)
+      background-color: transparent
+      white-space: nowrap
+      position: relative
+      transition: all .35s ease-in-out
+      &::after
+         content: ''
+         display: inline-block
+         width: 6.2rem
+         height: 6.2rem
+         background-image: url(../images/chevron-right.svg)
+         background-repeat: no-repeat
+         background-position: center
+         background-size: 24%
+         border: 2px solid rgba(#2B076E, .2)
+         border-radius: 50%
+         position: absolute
+         top: 0
+         right: calc(50% - 3.1rem)
+         transition: all .4s ease-in-out
+      &:hover
+         background-color: darken($accent, 20%)
+      &:focus
+         outline: none
+      @include breakpoint($medium)
+         width: 20.5rem
+         background-color: $accent
+         color: rgba(#fff, 1)
+         position: relative
+         &::after
+            position: absolute
+            top: 0
+            right: 0
+            background-color: $white
+            border: none
+            transform: scale(.55)
+.form
+   display: flex
+   justify-content: space-between
+   padding: 4.8rem
+   background-color: $accent
+   border-radius: 16px
+   @include breakpoint($large)
+      padding: 3.8rem
+   @include breakpoint($medium)
+      flex-direction: column
+
+   &-text__description
+      display: block
+      margin: 0
+      margin-top: 1.6rem
+      max-width: 34.8rem
+      line-height: 1.75
+      color: $white
+      @include breakpoint($large)
+         max-width: 30rem
+      @include breakpoint($medium)
+         max-width: 100%
+         margin-bottom: 3.5rem
+   &-letter
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-basis: 51%
+      @include breakpoint($small)
+         flex-direction: column
+         font-size: 1.2em
+      &__input
+         display: block
+         flex-basis: 100%
+         margin-right: 4rem
+         height: 3.5rem
+         background-color: transparent
+         color: $white
+         border: none
+         border-bottom: 1px solid rgba(#fff, .4)
+         @include breakpoint($small)
+            margin-bottom: 3rem
+         &::placeholder
+            color: $white
+      .form-letter__btn
+         flex-basis: content
+         padding: 1.4rem 3.2rem
+         @include breakpoint($large)
+            padding: 1.4rem 2.8rem
+         @include breakpoint($small)
+            font-size: .9em
+   &-text__description, &-text__title, &-letter__input
+      &::selection
+         background-color: darken($accent, 20%)
+         color: #fff
+.footer
+   display: flex
+   justify-content: space-between
+   padding-top: 5.8rem
+   padding-bottom: 3.4rem
+   color: $white
+   align-items: center
+   @include breakpoint($small)
+      flex-direction: column-reverse
+   &__text
+      @include breakpoint($medium)
+         margin-bottom: 0
+         font-size: .9em
+   &-list
+      display: flex
+      justify-content: space-between
+      flex-basis: 24.8rem
+      padding: 0
+      margin: 0
+      list-style-type: none
+      @include breakpoint($small)
+         flex-basis: 3rem
+      &__item
+         @include breakpoint($small)
+            margin-right: 3rem
+         &:last-child
+            @include breakpoint($small)
+               margin-right: 0
+      &__item a
+         font-family: FontAwesome
+         font-size: 2.4rem
+         transition: color .3s ease
+         &:hover
+            color: lighten($accent, 10%)
