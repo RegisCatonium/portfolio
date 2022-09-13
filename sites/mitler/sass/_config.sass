@@ -1,0 +1,68 @@
+// USER VARIABLES SECTION
+
+$accent: #f9c869 // Accent Color
+$bg-btn: #fff
+$fontsize: 1.6rem // Body Font Size
+$textcolor: #fff // Text Color
+$dark-text: #4a4a4a
+$lineheight: 1.65 // Document Line Height
+$userfont: Raleway, sans-serif // User Font Family
+$firasans: Fira Sans, sans-serif
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// -- media
+// @mixin breakpoint($bp)
+// 	@media screen and ( max-width: $bp)
+// 		@content
+
+// $tablet-bp: 991px
+// $mobile-bp: 575px
+// --
+
+// GENERAL DOCUMENT STYLES
+*
+	box-sizing: border-box
+
+html, body
+	overflow-x: hidden
+html
+	font-size: calc(100vw/1600*10)
+	// @include breakpoint($tablet-bp)
+	// 	font-size: .8vw
+	// @include breakpoint($mobile-bp)
+	// 	font-size: 1vw
+
+a
+	text-decoration: none
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 32rem
+	position: relative
+
+body, .callback__menu
+	&::-webkit-scrollbar
+		width: 2px
+		background-color: #999
+		&-thumb
+			background-color: #444
+			transition: background-color .2s ease
+			&:hover
+				background-color: #222

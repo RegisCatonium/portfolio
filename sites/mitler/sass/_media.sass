@@ -1,0 +1,141 @@
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	html
+		font-size: .8vw
+	.header
+		max-height: 75rem
+		min-height: 65rem
+		.nav-menu-list__item
+			font-size: 1.8rem
+	.services
+		&-item
+			min-width: 32.7rem
+			min-height: 74rem
+		&-composition
+			font-size: .8rem
+			// padding: 4.5em 5.2em
+		&-title
+			margin-bottom: .8em
+		&-list__item
+			font-size: 2em
+		.btn
+			font-size: 1.1rem
+			padding: 1.3rem 4rem
+
+	.section-fotorama
+		flex-direction: column
+		padding-left: 20rem
+		padding-right: 20rem
+		grid-gap: 2.5rem
+		&__block-text
+			width: 100%
+		&__block-foto
+			width: 100%
+			height: 42rem
+
+
+
+/* Medium Devices, Desktops */
+// @media only screen  and (max-width : 992px)
+
+
+
+// /* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	html
+		font-size: 1vw
+	.header
+		padding-right: 6.5rem
+		padding-left: 6.5rem
+		&-contacts__item-number
+			display: none
+
+	.burger__item
+		height: 1px
+
+	.welcom
+		&__title
+			font-size: 5.8rem
+		&__city
+			margin-bottom: 2rem
+		&__span
+			&::before, &::after
+				width: 17%
+		p
+			font-size: 1.8rem
+		&-btn
+			margin-top: 2rem
+
+	.section-fotorama
+		flex-direction: column
+		padding-left: 12rem
+		padding-right: 12rem
+	.swiper-button-prev::after
+		transform: translateX(-6rem)
+	.swiper-button-next::after
+		transform: translateX(6rem)
+	.review
+		&__name
+			font-size: 3.6rem
+		&__date
+			font-size: 1.8rem
+		&__stars
+			font-size: 1.6rem
+		&__text
+			font-size: 2rem
+			margin-bottom: 8rem
+		&__pagination .swiper-pagination-bullet
+			font-size: 1.1rem
+	.thumb
+		border-width: 3px
+	.footer
+		flex-wrap: wrap
+		padding: 6rem 6rem
+		font-size: 1.3rem
+		justify-content: space-between
+
+		// align-content: space-between
+		&__item
+			flex-basis: 32%
+			// width: 100rem
+			margin: 0
+			&:first-child
+				flex-basis: 15%
+			&:last-child
+				flex-basis: 100%
+				margin: 3rem 0 0
+		&__item + &__item
+			margin-left: 0
+		&-phone
+			font-size: 2.2em
+
+// /* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	html
+		font-size: 1.1vw
+	button.btn, a.btn
+		font-size: 1.8rem
+		letter-spacing: 2px
+	.services
+		.btn
+			width: 70%
+			font-size: 1.4rem
+			line-height: 2
+	.welcom
+		&__title
+			font-size: 5.4rem
+		&__city
+			font-size: 1.8rem
+		&__span
+			&::before, &::after
+				width: 13%
+		p
+			font-size: 2rem
+	.thumb
+		border-width: 2px
+// @media only screen and (max-width : 480px)
+
+
+// // /* Custom, iPhone Retina */
+// @media only screen and (max-width : 320px)
