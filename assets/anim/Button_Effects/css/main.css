@@ -1,0 +1,141 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: calc(100vw/1600*10);
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-input-placeholder {
+  color: #666;
+}
+
+:-ms-input-placeholder {
+  color: #666;
+}
+
+::-ms-input-placeholder {
+  color: #666;
+}
+
+::placeholder {
+  color: #666;
+}
+
+::-moz-selection {
+  background-color: #f9c869;
+  color: #fff;
+}
+
+::selection {
+  background-color: #f9c869;
+  color: #fff;
+}
+
+input, textarea {
+  outline: none;
+}
+
+input:focus:required:invalid, textarea:focus:required:invalid {
+  border-color: red;
+}
+
+input:required:valid, textarea:required:valid {
+  border-color: green;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  color: #fff;
+  min-width: 32rem;
+  position: relative;
+}
+
+body {
+  background-color: #1f1f1f;
+  font-size: 10px;
+}
+
+.container {
+  max-width: 117rem;
+  height: 100vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+.button {
+  display: block;
+  font-size: 1.6rem;
+  padding: 1rem 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .1em;
+  border: 2px solid #444;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  position: relative;
+}
+
+.button:hover {
+  color: var(--clr);
+  letter-spacing: .25em;
+  -webkit-box-shadow: 0 0 35px 5px var(--clr);
+          box-shadow: 0 0 35px 5px var(--clr);
+  border-color: var(--clr);
+}
+
+.button:hover::before {
+  left: 20%;
+  -webkit-transform: scaleX(1.6);
+          transform: scaleX(1.6);
+}
+
+.button:hover::after {
+  right: 20%;
+  -webkit-transform: scaleX(1.6);
+          transform: scaleX(1.6);
+}
+
+.button::before, .button::after {
+  content: '';
+  width: .7em;
+  height: .35em;
+  background-color: #1f1f1f;
+  border: 2px solid var(--clr);
+  position: absolute;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.button::before {
+  top: -0.35em;
+  left: 80%;
+}
+
+.button::after {
+  bottom: -0.35em;
+  right: 80%;
+}
+/*# sourceMappingURL=main.css.map */
