@@ -1,0 +1,427 @@
+@import config
+
+$text: #7f7f82
+
+body, html
+	height: 100vh
+
+body
+	color: $accent
+
+.text-center
+	text-align: center
+
+.main
+	background-image: url(../images/bg.jpg)
+	background-repeat: no-repeat
+	display: flex
+	flex-direction: column
+	height: 100%
+	justify-content: space-between
+
+.wrapper
+	max-width: 1170px
+	padding-left: 15px
+	padding-right: 15px
+	margin: 0 auto
+
+.header
+	max-width: 1170px
+	padding-left: 15px
+	padding-right: 15px
+	margin: 0 auto
+	margin-top: 40px
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.nav
+	list-style-type: none
+	padding-left: 0
+	margin: 0
+	display: flex
+	&-item
+		margin-left: 22px
+	&-link
+		color: $accent
+		text-decoration: none
+		border-bottom: 1px solid transparent
+		transition: 0.3s
+		&:hover
+			border-bottom: 1px solid $accent
+
+.title-h1
+	font-size: 60px
+	text-align: center
+	font-weight: 300
+	span
+		font-weight: 500
+
+.title-h2
+	font-size: 36px
+	font-weight: 400
+	margin: 0
+	margin-bottom: 20px
+
+.title-h3
+	font-size: 22px
+	font-weight: 400
+
+.after-title
+	font-size: 16px
+	color: $text
+
+.btn-scroll
+	background-color: transparent
+	border: none
+	display: block
+	margin: 0 auto
+	opacity: 0
+	pointer-events: none
+
+.section-abbout
+	padding-top: 238px
+	padding-bottom: 72px
+	.title-h2
+		font-size: 48px
+		font-weight: 500
+
+.box-abbout
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: relative
+	&-item
+		flex: 0 0 45%
+		max-width: 45%
+		position: relative
+		&:first-child
+			display: flex
+			justify-content: flex-end
+			flex: 0 0 50%
+			max-width: 50%
+	&__back
+		position: absolute
+		z-index: -1
+		left: 0
+		top: -108px
+	&__vertical
+		position: absolute
+		left: -4px
+		letter-spacing: 1.6px
+		writing-mode: vertical-lr
+		transform: rotate(180deg)
+		bottom: 58px
+		&::after
+			display: block
+			content: ''
+			width: 1px
+			height: 45px
+			background-color: $accent
+			position: absolute
+			right: 15px
+			top: 100px
+	&__text
+		color: $text
+		font-size: 16px
+		line-height: 1.5
+		text-align: justify
+		margin: 0
+		margin-bottom: 45px
+
+.progress-bar
+	&-text
+		font-size: 16px
+		font-weight: 500
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+	&-line
+		width: 100%
+		height: 2px
+		background-color: $accent
+		position: relative
+		&::before
+			content: ''
+			background-image: url(../images/circle.png)
+			display: block
+			width: 6px
+			height: 11px
+			repeat: no-repeat
+			position: absolute
+			left: -2px
+			top: calc(50% - 5.5px)
+		&::after
+			content: ''
+			position: absolute
+			display: block
+			height: 2px
+			background-color: #f2f2f2
+			right: 0
+	&--indesing
+		&::after
+			width: 35%
+	&--xd
+		&::after
+			width: 20%
+
+.section-services
+	padding-top: 72px
+	padding-bottom: 119px
+	background-color: #faf9fe
+
+.service
+	display: grid
+	grid-template: 1fr 1fr / 1fr 1fr 1fr
+	grid-gap: 31px 48px
+	margin-top: 65px
+	&-item
+		&:hover
+			.service__link-text
+				width: inherit
+				opacity: 1
+				padding-right: 9px
+	.title-h3
+		margin-bottom: 18px
+	&__text
+		color: $text
+		font-size: 14px
+		text-align: justify
+		line-height: 1.8
+	&__icon
+		display: block
+		width: 44px
+		height: 37px
+		background-repeat: no-repeat
+		margin-bottom: 30px
+	&__design
+		background-image: url(../images/icon/icon01.png)
+		background-size: 41px 35px
+	&__photo
+		background-image: url(../images/icon/icon02.png)
+		background-size: 43px 35px
+	&__web
+		background-image: url(../images/icon/icon03.png)
+		background-size: 41px 35px
+	&__social
+		background-image: url(../images/icon/icon04.png)
+		background-size: 37px 37px
+	&__marketing
+		background-image: url(../images/icon/icon05.png)
+		background-size: 44px 37px
+	&__app
+		background-image: url(../images/icon/icon06.png)
+		background-size: 37px 37px
+	&__link
+		color: $accent
+		font-size: 14px
+		text-decoration: none
+		position: relative
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		height: 60px
+		&-text
+			opacity: 0
+			width: 0
+			padding-right: 0
+			transition: 0.3s ease-in-out
+		&-line
+			display: block
+			width: 25px
+			height: 1px
+			background-color: $accent
+
+.section-portfolio
+	padding-top: 119px
+	padding-bottom: 100px
+
+.portfolio
+	display: grid
+	grid-template: repeat(7, 88px)/ 1fr 1fr 1fr
+	grid-gap: 38px
+	margin-top: 83px
+	&-01
+		grid-column: 1 / 2
+		grid-row: 1 / 4
+	&-02
+		grid-column: 2 / 3
+		grid-row: 1 / 5
+	&-03
+		grid-column: 3 / 4
+		grid-row: 1 / 4
+	&-04
+		grid-column: 1 / 2
+		grid-row: 4 / 8
+	&-05
+		grid-column: 2 / 3
+		grid-row: 5 / 8
+	&-06
+		grid-column: 3 / 4
+		grid-row: 4 / 8
+	&-thumb
+		position: relative
+		overflow: hidden
+		width: 100%
+		height: 100%
+	img
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+.btn
+	color: #fff
+	background-color: $accent
+	font-size: 16px
+	text-decoration: none
+	padding: 18px 0
+	border: none
+	
+.section-banner
+	padding-top: 72px
+	padding-bottom: 113px
+	background-color: $accent
+	color: #fff
+	text-align: center
+	.before-title
+		font-size: 22px
+		margin-bottom: 0
+	.title-h2
+		font-size: 48px
+		margin-top: 15px
+		margin-bottom: 42px
+	.btn
+		color: $accent
+		background-color: #fff
+		padding: 12px 57px
+
+.section-feedback
+	padding-top: 122px
+	padding-bottom: 100px
+
+.feedback
+	display: flex
+	justify-content: space-between
+	margin-top: 66px
+	&-item
+		flex: 0 0 45%
+		max-width: 45%
+	&-top
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		margin-bottom: 56px
+	&-thumb
+		margin-right: 20px
+	&-name
+		&__title
+			font-size: 22px
+			margin-top: 14px
+			margin-bottom: 11px
+		&__job
+			font-size: 12px
+			color: $text
+	&-body
+		font-size: 18px
+		color: $text
+		font-style: italic
+		padding-left: 28px
+		line-height: 1.8
+
+.section-advanteges
+	padding-top: 100px
+	padding-bottom: 82px
+	background-color: #faf9fe
+
+.advanteges
+	display: flex
+	justify-content: space-between
+	text-align: center
+	&__title
+		font-size: 16px
+		text-transform: uppercase
+		span
+			font-size: 22px
+			display: block
+			font-weight: 500
+			margin-bottom: 13px
+	&__icon
+		background-color: $accent
+		width: 70px
+		height: 70px
+		border-radius: 100%
+		margin: 0 auto
+		margin-bottom: 27px
+		background-position: center
+		background-repeat: no-repeat
+		&-01
+			background-image: url(../images/heart.png)
+			background-size: 26px 23px
+		&-02
+			background-image: url(../images/case.png)
+			background-size: 26px 23px
+		&-03
+			background-image: url(../images/spiral.png)
+			background-size: 26px 24px
+		&-04
+			background-image: url(../images/cup.png)
+			background-size: 19px 23px
+
+.section-form
+	padding-top: 122px
+	padding-bottom: 130px
+
+.form
+	display: flex
+	flex-direction: column
+	max-width: 750px
+	margin: 0 auto
+	&__input, &__textarea
+		border: none
+		border-bottom: 1px solid #e1e1e1
+		font-size: 14px
+		padding: 17px 25px
+		text-align: center
+		margin-bottom: 15px
+		-webkit-transition: 0.3s
+		transition: 0.3s
+		box-sizing: border-box
+		&:focus
+			outline: none
+			border-bottom: 1px solid $accent
+	&__textarea
+		padding: 12px 25px
+		min-height: 86px
+		margin-bottom: 35px
+
+footer
+	background-color: $accent
+
+.footer
+	display: flex
+	justify-content: space-between
+	align-items: center
+	color: #fff
+	font-size: 16px
+	padding-top: 69px
+	padding-bottom: 64px
+
+.social-network
+	display: flex
+	list-style-type: none
+	padding-left: 0
+	margin: 0
+	&__item
+		margin-left: 20px
+	&__link
+		color: #fff
+
+
+@import media

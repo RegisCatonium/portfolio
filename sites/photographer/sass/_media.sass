@@ -1,0 +1,192 @@
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+/* Medium Devices, Desktops */
+@media only screen  and (max-width : 992px)
+	/**/
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.logo
+		display: none
+	.header
+		justify-content: space-around
+	.main
+		background-size: cover
+	.title-h1 
+		font-size: 50px
+	.section-abbout
+		padding-top: 50px
+		padding-bottom: 50px
+	.box-abbout 
+		&__back 
+			display: none
+		&__vertical
+			display: none
+		.title-h2
+			font-size: 40px
+	.section-services
+		padding-top: 40px
+		padding-bottom: 30px
+	.section-portfolio
+		padding-top: 40px
+		padding-bottom: 65px
+	.portfolio
+		grid-gap: 25px
+		grid-template: repeat(7, 45px)/ 1fr 1fr 1fr
+	.section-banner
+		padding-top: 45px
+		padding-bottom: 80px
+	.section-feedback
+		padding-top: 65px
+		padding-bottom: 65px
+	.section-advanteges
+		padding-top: 65px
+		padding-bottom: 65px
+	.section-form
+		padding-top: 65px
+		padding-bottom: 65px
+
+@media only screen and (max-width : 540px)
+	html
+		overflow:  hidden
+	.title-h2 
+		font-size: 40px
+	.header
+		font-size: 12px
+	.box-abbout
+		align-items: start
+		&__text
+			font-size: 14px
+		&__front
+			height: 395px
+		&-item
+			&:first-child
+				flex: 0 0 45%
+	.progress-bar
+		&-text
+			font-size: 13px
+			margin-bottom: 5px
+	.service
+		grid-gap: 15px 30px
+		margin-top: 40px
+		.title-h3
+			font-size: 18px
+			margin-bottom: 14px
+		&__text
+			font-size: 12px
+			line-height: 1.5
+		&__icon
+			display: none
+	.portfolio
+		margin-top: 40px
+	.section-banner
+		.before-title
+			font-size: 18px
+		.title-h2
+			font-size: 34px
+	.section-feedback
+		padding-top: 45px
+		padding-bottom: 25px
+	.feedback
+		margin-top: 45px
+		&-top
+			margin-bottom: 30px
+		&-body
+			font-size: 13px
+			line-height: 1.5
+			text-align: justify
+			padding: 0
+	.section-advanteges
+		padding-top: 40px
+		padding-bottom: 25px
+	.advanteges__title
+		font-size: 14px
+	.advanteges__title span
+		font-size: 20px
+	.section-form
+		padding-top: 40px
+		padding-bottom: 30px
+	.after-title
+		font-size: 14px
+	.form
+		&__input, &__textarea
+			font-size: 14px
+			padding: 10px 20px
+			text-align: center
+			margin-bottom: 15px
+		&__textarea
+			padding: 10px 25px
+			min-height: 86px
+			margin-bottom: 25px
+	.btn
+		font-size: 14px
+	.footer
+		padding-top: 40px
+		padding-bottom: 35px
+		span
+			font-size: 12px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.title-h1 
+		font-size: 40px
+	.title-h2
+		font-size: 30px
+	.box-abbout
+		.title-h2
+			font-size: 30px
+		&__text
+			font-size: 12px
+			margin-bottom: 25px
+		&__front
+			height: 320px
+		&-item
+			&:first-child
+				flex: 0 0 45%
+	.progress-bar
+		&-text
+			font-size: 12px
+			line-height: 0.5
+			margin-bottom: 5px
+	.service
+		grid-gap: 15px 10px
+		margin-top: 25px
+		.title-h3
+			font-size: 16px
+			margin-bottom: 14px
+		&__text
+			font-size: 11px
+		&__link
+			font-size: 12px
+			height: 30px
+			&-line
+				width: 20px
+		&-item
+			.service__link-text
+				width: inherit
+				opacity: 1
+				padding-right: 9px
+	.portfolio
+		grid-gap: 10px
+		grid-template: repeat(7, 35px)/ 1fr 1fr 1fr
+.feedback
+	&-item
+		max-width: 47%
+	&-top
+		margin-bottom: 15px
+	&-thumb
+		margin-right: 5px
+	&-name
+		&__title
+			font-size: 16px
+			margin-top: 0
+		&__job
+			font-size: 12px
+	&-body
+		font-size: 12px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
