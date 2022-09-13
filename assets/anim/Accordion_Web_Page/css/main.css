@@ -1,0 +1,230 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: calc(100vw/1600*10);
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-input-placeholder {
+  color: #666;
+}
+
+:-ms-input-placeholder {
+  color: #666;
+}
+
+::-ms-input-placeholder {
+  color: #666;
+}
+
+::placeholder {
+  color: #666;
+}
+
+::-moz-selection {
+  background-color: #f9c869;
+  color: #fff;
+}
+
+::selection {
+  background-color: #f9c869;
+  color: #fff;
+}
+
+input, textarea {
+  outline: none;
+}
+
+input:focus:required:invalid, textarea:focus:required:invalid {
+  border-color: red;
+}
+
+input:required:valid, textarea:required:valid {
+  border-color: green;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  color: #fff;
+  min-width: 32rem;
+  position: relative;
+}
+
+body {
+  background-color: #f5f8ff;
+  font-size: 10px;
+}
+
+.container {
+  max-width: 117rem;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+.accordion {
+  margin: 0 4rem;
+  max-width: 60rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.accordion__title {
+  color: #333;
+  font-size: 3.6rem;
+}
+
+.accordion__tab {
+  padding: .5em 2em;
+  position: relative;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+  -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.accordion__tab input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.accordion__tab input:checked ~ .accordion__tab-title::after {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  color: #000;
+}
+
+.accordion__tab input:checked ~ .accordion__tab-content {
+  max-height: 100vh;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.accordion__tab input:checked ~ .accordion__tab-title h2 {
+  padding: .2rem 1rem;
+  background-color: #fff;
+}
+
+.accordion__tab-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.accordion__tab-title::after {
+  content: '+';
+  position: absolute;
+  right: 2rem;
+  font-size: 2.6em;
+  color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: color .3s ease-in-out, -webkit-transform .8s linear;
+  transition: color .3s ease-in-out, -webkit-transform .8s linear;
+  transition: color .3s ease-in-out, transform .8s linear;
+  transition: color .3s ease-in-out, transform .8s linear, -webkit-transform .8s linear;
+  z-index: 3;
+}
+
+.accordion__tab-title:hover::after {
+  color: #333;
+}
+
+.accordion__tab-title h2 {
+  font-size: 2.3em;
+  font-weight: 500;
+  margin: 0;
+  z-index: 3;
+}
+
+.accordion__tab-title h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2.2em;
+  height: 2.2em;
+  font-size: 2.4em;
+  font-weight: 600;
+  margin-right: .5em;
+  color: #fff;
+  background-color: var(--clr1);
+  background-image: linear-gradient(132deg, var(--clr1), var(--clr2));
+  border-radius: 5px;
+}
+
+.accordion__tab-content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+  padding: 1rem 0;
+  -webkit-transition: max-height 1.5s linear;
+  transition: max-height 1.5s linear;
+  position: relative;
+  z-index: 3;
+}
+
+.accordion__tab-content p {
+  font-size: 1.6em;
+}
+
+.accordion__tab input:checked ~ .accordion__tab-title {
+  padding-top: 2rem;
+}
+
+.accordion__tab input:checked ~ .accordion__tab-title h3 {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding-right: 1.4rem;
+  font-size: 12em;
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+/*# sourceMappingURL=main.css.map */
