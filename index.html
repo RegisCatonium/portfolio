@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="assets/css/style.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    
+    <title>Regis.Catonium | Home</title>
+</head>
+<body>
+
+    <div class="preloader"><div class="puls"></div></div>
+    
+    <!-- <div class="transition"></div> <div class="cta"></div> -->
+    
+    <!-- кастомный курсор -->
+    <div id="cursor"></div>
+    <div id="aura"></div>
+    <!-- /кастомный курсор -->
+    
+    <header class="header">
+    	<a href="index.html"><img class="header__logo" src="assets/images/logo.svg" alt=""></a>
+    
+    	<div class="menu">
+    
+    		<input type="checkbox" />
+    		
+    		<span id="span1"></span>
+    		<span id="span2"></span>
+    		<span id="span3"></span>
+    
+    		<div class="menu__nav">
+    			<ul>
+    				<l1><a class="menu__nav-item link__inner" href="index.html">Главная</a></l1>
+    				<l1><a class="menu__nav-item link__inner" href="aboutMe.html">Обо мне</a></l1>
+    				<l1><a class="menu__nav-item link__inner" href="blogs.html">Блог</a></l1>
+    				<l1><a class="menu__nav-item link__inner" href="portfolio.html">Портфолио</a></l1>
+    				<l1><a class="menu__nav-item link__inner" href="person.html">Контакты</a></l1>
+    			</ul>
+    		</div>
+    
+    	</div> 
+    </header>
+    
+    
+    
+
+    <div class="container">
+        
+        <main class="main">
+           <ul class="social">
+              <li class="social-item"><a class="social-link social-vk" href="#" data-modal="contact-modal"></a></li>
+              <li class="social-item"><a class="social-link social-fb" href="#" data-modal="contact-modal"></a></li>
+              <li class="social-item"><a class="social-link social-instagram" href="#" data-modal="contact-modal"></a></li>
+           </ul>
+        
+           <div class="main__person">
+              <h1 class="h1"><span>Regis</span> Catonium</h1>
+              <h2 class="h2 printText">Я <span>Веб-разработчик</span></h2>
+           </div>
+        
+           <ul class="feedback">
+              <li class="feedback-item"><a class="feedback-link feedback-email" href="person.html" target="_blank"></a></li>
+              <li class="feedback-item"><a class="feedback-link feedback-smartphone" href="https://t.me/RegisCatonium" target="_blank"></a></li>
+           </ul>
+        </main>
+        
+        <!-- модальное окно -->
+        <div class="modal" id="contact-modal">
+        	<div class="modal__content modal__content--contact">
+        		<button class="btn__nobg modal__close" type="button">
+        			<img src="assets/images/close.svg" alt="Закрыть">
+        		</button>
+        
+        		<p class="modal__text">Социальные сети сейчас в разработке. <br> Для связи со мной можете использовать электронную почту или телеграм.
+        		</p>
+        		<ul class="modal__footer">
+        			<li>
+        				<span>E-mail:</span><a href="mailto:Regis.Catonium@gmail.com">Regis.Catonium@gmail.com</a>
+        			</li>
+        			<li>
+        				<span>Телеграм:</span><a href="https://t.me/RegisCatonium" target="_blank">t.me/RegisCatonium</a>
+        			</li>
+        		</ul>
+        	</div><!-- /modal__content -->
+        </div>
+        <!-- /modal -->
+        
+        <canvas id="sky"></canvas>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+</body>
+</html>
