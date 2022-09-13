@@ -1292,7 +1292,7 @@ h1 span, h2 span, h3 span, h4 span {
     border-radius: 1em;
     overflow: hidden;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../images/bg-contact.jpg);
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -1595,79 +1595,6 @@ h1 span, h2 span, h3 span, h4 span {
     .button {
         padding-top: 0.45em;
     }
-}
-
-@media only screen and (max-width: 480px) {
-    .transition {
-        top: -25%;
-        left: -25%;
-        -webkit-transform: skewX(-40deg) translateX(-150em);
-        transform: skewX(-40deg) translateX(-150em);
-    }
-  @    -webkit-keyframes anim {
-        0% {
-      -webkit-transform: skewX(-40deg) translateX(-150em);
-        transform: skewX(-40deg) translateX(-150em);
-        z-index: 100000;
-        top: 0;
-        left: 0;
-    }
-
-    100% {
-        -webkit-transform: skewX(-40deg) translateX(300em);
-        transform: skewX(-40deg) translateX(300em);
-        z-index: 100000;
-        top: 0;
-        left: 0;
-    }
-}
-
-@keyframes anim {
-    0% {
-        -webkit-transform: skewX(-40deg) translateX(-150em);
-        transform: skewX(-40deg) translateX(-150em);
-        z-index: 100000;
-        top: 0;
-        left: 0;
-    }
-
-    100% {
-        -webkit-transform: skewX(-40deg) translateX(300em);
-        transform: skewX(-40deg) translateX(300em);
-        z-index: 100000;
-        top: 0;
-        left: 0;
-    }
-}
-
-.cta {
-    -webkit-transform: skewX(-40deg) translateX(-140em);
-    transform: skewX(-40deg) translateX(-140em);
-}
-
-@-webkit-keyframes anim_2 {
-    0% {
-        z-index: 10000;
-        width: 0%;
-    }
-
-    100% {
-        z-index: 10000;
-        width: 450em;
-    }
-}
-
-@keyframes anim_2 {
-    0% {
-        z-index: 10000;
-        width: 0%;
-    }
-
-    100% {
-        z-index: 10000;
-        width: 450em;
-    }
-}
 }
 
 @media only screen and (max-width: 480px) {
