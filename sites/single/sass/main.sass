@@ -1,0 +1,350 @@
+@import reset
+@import config
+
+// .wrapper
+// 	margin: 0 auto
+// 	padding: 10em 5em 0 5em
+//    max-width: 1920px
+// 	background-color: #4844857a
+
+
+.header
+   display: flex
+   width: 100%
+   height: 50vw
+   flex-direction: column
+   align-items: center
+   background-image: url(../images/bg.jpg)
+   background-size: cover
+   background-repeat: no-repeat
+   &::before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 50vw
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 15%, rgba(0, 0, 0, 0) 60%)
+      z-index: 1
+
+.logo
+   display: block
+   width: 27.3em
+   height: 27.3em
+   margin-top: 10em
+   background-color: $black
+   border-radius: 50%
+   position: relative
+   z-index: 10
+   img
+      display: block
+      position: absolute
+      width: 16.9em
+      height: 12em
+      top: 30%
+      left: 18%
+
+.title
+   font-size: 5em
+   // color: #fff
+   z-index: 10
+   margin: 0
+   line-height: 1.5
+   &-1
+      text-transform: uppercase
+      font-weight: 600
+   &-2
+      text-transform: uppercase
+      font-weight: 400
+      margin-top: 1.5em
+
+
+.modal
+   display: flex
+   flex-direction: column
+   justify-content: space-around
+   align-items: center
+   background-color: #fff
+   font-size: 1.5rem
+   width: 22em
+   height: 22em
+   position: absolute
+   top: 42em
+   left: 40%
+   z-index: 10
+   box-shadow: 0 1px 4px #000
+   color: $gray
+   &-input
+      width: 80%
+      height: 2.5em
+      border: 1px solid $gray
+      padding-left: 1.2em
+      margin-top: .5em
+      &::placeholder
+         color: $gray
+   &-image
+      width: 100%
+   &-text
+      width: 70%
+      text-align: center
+   .btn
+      margin-bottom: .7em
+
+.btn
+   display: block
+   width: 8em
+   height: 2em
+   font-size: 2.4rem
+   color: #fff
+   background-color: $bg-btn
+   text-transform: uppercase
+   // border: 1px solid $accent
+   border: none
+   text-align: center
+   // transition: all 0.75s ease 0s
+
+.block
+   display: flex
+   justify-content: space-around
+   margin-right: 20em
+   margin-left: 35em
+   padding-top: 20em
+   font-size: 1rem
+   position: relative
+   color: $black
+   &-title
+      font-size: 2.7em
+      font-weight: 600
+   &-text
+      font-size: 1.4em
+      margin-bottom: 10em
+   .doc, .photos
+      width: 25%
+      position: relative
+      &::before
+         content: ''
+         display: block
+         width: 9.5em
+         height: 11.5em
+         position: absolute
+         background-position: center
+         background-repeat: no-repeat
+         background-size: cover
+         left: -12em
+
+   .doc::before
+      background-image: url(../images/doc.png)
+   .photos::before
+      background-image: url(../images/photo.png)
+
+
+.block-green
+   width: 100%
+   height: 161.5em
+   font-size: 1rem
+   background-color: #308355
+   z-index: 2
+
+.section, .section-bottom
+   display: flex
+   align-items: center
+   font-size: 1.4em
+   padding: 5em 25em
+   // color: #fff
+   &-title
+      font-size: 2.4em
+      font-weight: 600
+      line-height: 1
+      margin: 1em 0
+      z-index: 2
+   &-text
+      font-size: 1.15em
+      z-index: 2
+   &-text + &-text
+      margin-top: 2em
+
+.section
+   flex-direction: column
+   background-color: #5fc18b
+   padding-bottom: 20em
+   clip-path: polygon(0% 0%, 100% 0, 100% 70%, 0 100%)
+   &-image
+      width: 10em
+      height: auto
+      font-size: 1.2em
+      position: relative
+      z-index: 1
+      img
+         width: 10em
+         height: auto
+         z-index: 2
+      &::before
+         content: ''
+         display: block
+         position: absolute
+         font-size: 1.8em
+         width: 30em
+         height: 30em
+         clip-path: polygon(86.7% 0, 97% 0, 98% 6%, 10% 95%, 0 85%)
+         right: 1.25em
+         top: 0
+         z-index: -1
+      &::after
+         content: ''
+         display: block
+         position: absolute
+         font-size: 1.8em
+         width: 30em
+         height: 30em
+         clip-path: polygon(93% 0, 97% 0, 98% 12.5%, 10% 95%, 0 94%)
+         right: -.5em
+         top: 1.75em
+         z-index: -1
+      &::after, &::before
+         background-image: linear-gradient(230deg, rgba(0, 0, 0, 0.2) 15%, rgba(0, 0, 0, 0) 60%)
+
+.section-bottom
+   background-color: #44a36f
+   align-items: start
+   overflow: hidden
+   padding-top: 22em
+   clip-path: polygon(0% 41%, 100% 0, 100% 100%, 0 100%)
+   position: relative
+   top: -23.3em
+   .section-title
+      margin-top: 0
+   .wrap
+      display: flex
+      flex-direction: column
+      margin-left: 5em
+
+   &-image
+      font-size: 1.7rem
+      width: 15em
+      height: auto
+      position: relative
+      z-index: 1
+      img
+         width: 15em
+         height: auto
+      &::before
+         content: ''
+         display: block
+         position: absolute
+         font-size: 1.8em
+         width: 25em
+         height: 25em
+         background-image: linear-gradient(225deg, rgba(0, 0, 0, 0.15) 15%, rgba(0, 0, 0, 0) 50%)
+         clip-path: polygon(71.5% 0, 95.5% 0, 97.85% 21%, 95% 23.5%, 99% 27%, 40% 95%, 0 85%)
+         right: 0
+         top: 0
+         z-index: -1
+   .section-text
+      margin-bottom: 2.5em
+   .visit
+      margin-bottom: 1em
+
+// кнопка
+.visit
+   display: block
+   width: 9em
+   height: 2.4em
+   font-size: 1.8em
+   font-weight: 600
+   letter-spacing: .2em
+   color: $textcolor
+   background-color: transparent
+   border: 2px solid $textcolor
+   border-radius: .6em
+   text-align: center
+   line-height: 2.2em
+   z-index: 2
+   transition: all 0.75s ease 0s
+
+   &:link, &:visited 
+      position: relative
+      overflow: hidden
+      -webkit-transition: all 1s ease
+      -moz-transition: all 1s ease
+      -o-transition: all 1s ease
+      transition: all 1s ease
+
+   &:hover, &:hover 
+      color: #174d30
+      text-shadow: none
+      border: 2px solid #21643f
+
+   &:link:hover:after, &:visited:hover:after 
+      height: 450%
+
+   &:link:after, &:visited:after 
+      content: ""
+      position: absolute
+      height: 0%
+      left: 50%
+      top: 50%
+      width: 150%
+      -webkit-transition: all 0.75s ease 0s
+      -moz-transition: all 0.75s ease 0s
+      -o-transition: all 0.75s ease 0s
+      transition: all 0.75s ease 0s
+
+   &:after 
+      background: $bg-btn
+      -moz-transform: translateX(-50%) translateY(-50%) rotate(25deg)
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(25deg)
+      -webkit-transform: translateX(-50%) translateY(-50%) rotate(25deg)
+      transform: translateX(-50%) translateY(-50%) rotate(25deg)
+      z-index: -1
+// --кнопка
+
+.block-map
+   position: relative
+   width: 100%
+   height: 70em
+   z-index: 1
+   
+   .contact
+      display: flex
+      width: 45em
+      height: 45em
+      font-size: 1rem
+      background-color: rgba(#fff, .7)
+      border-radius: 50%
+      box-shadow: 0px 0px 2em .5em rgba($black, .4)
+      position: absolute
+      top: 25%
+      left: 35%
+      .form
+         display: flex
+         width: 100%
+         padding-top: 4em
+         flex-direction: column
+         align-items: center
+         justify-content: center
+
+         &-item
+            height: 2.5em
+            font-size: 1.6em
+            width: 60%
+            margin-bottom: 1.5em
+            padding-left: 1em 
+            border: 1px solid rgba($black, .3)
+
+         &-textarea
+            height: 6em
+            resize: none
+
+         .btn
+            margin: 0
+            padding: 0
+            font-size: 4em
+            width: 2.5em
+            height: 2.5em
+            line-height: 1
+            border-radius: 50%
+
+.bottom
+   font-size: 1.4em
+   padding-top: .8em
+   height: 3.5em
+   background-color: $accent
+   text-align: center
