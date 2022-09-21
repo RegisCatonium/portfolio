@@ -1,0 +1,296 @@
+// @import "_vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+// @media only screen and (max-width : 1200px)
+
+
+
+
+/* Medium Devices, Desktops */
+@media only screen  and (max-width : 992px)
+	.content
+		.title-1
+			font-size: 4em
+		.title-2
+			font-size: 2.2em
+		&__box-inner .text
+			font-size: 2.4em
+		&__box__services-designing .service__text
+			font-size: 1.7em
+		&__box .download
+			font-size: 2.2em
+	.content-contact
+		font-size: .7vw
+	.menu__nav-item
+		font-size: 4em
+
+
+
+// // /* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.main .h1
+		font-size: 5.5em
+	.main .h2
+		font-size: 3.5em
+	.printText
+		animation: typing 10s steps(30, end) infinite, blink-caret .8s step-end infinite
+	.social, .feedback
+		font-size: 1.7rem
+	.blog__section-title
+		padding-bottom: 0
+
+	.button
+		padding-top: .45em 
+
+
+// // /* Extra Small Devices, Phones */
+// @media only screen and (max-width : 480px)
+// 	.transition
+// 		top: -25%
+// 		left: -25%
+// 		transform: skewX(-40deg) translateX(-150em)
+   
+// 	@keyframes anim
+// 		0%
+// 			transform: skewX(-40deg) translateX(-150em)
+// 			z-index: $z-index-max
+// 			top: 0
+// 			left: 0
+
+// 		100%
+// 			transform: skewX(-40deg) translateX(300em)
+// 			z-index: $z-index-max
+// 			top: 0
+// 			left: 0
+			
+// 	.cta 
+// 		transform: skewX(-40deg) translateX(-140em)
+
+// 	@keyframes anim_2
+// 		0%
+// 			z-index: $z-index-anim-bg
+// 			width: 0%
+
+// 		100%
+// 			z-index: $z-index-anim-bg
+// 			width: 450em
+	
+@media only screen and (max-width : 480px)
+	html
+		font-size: 1.2vw
+	.main
+		font-size: 1.15em
+		flex-direction: column
+		justify-content: space-around
+	.social, .feedback
+		display: flex
+		width: 55%
+		justify-content: space-between
+		li+li
+			margin-top: 0
+	.menu__nav-item
+		font-size: 5em
+		padding-bottom: 1.5em 
+	.content
+		font-size: 1.5em
+		.title-1 + .title-2
+			margin-bottom: 2.5em
+		
+	.content__box
+		flex-direction: column
+		align-items: center
+		height: 100%
+		&-top
+			flex-direction: column-reverse
+			height: 35%
+			margin-bottom: 7em
+			
+			.title-1
+				font-size: 3em
+				margin-bottom: 1em
+				// text-align: left
+			.text
+				line-height: 1.8
+				margin-bottom: 1.5em
+		&-inner
+			width: 90%
+		&-image
+			margin-bottom: 5em
+			align-self: center
+	.services
+		height: 100%
+		flex-direction: column
+		align-items: center
+		margin-bottom: 5em
+		&-item
+			font-size: 1.1em
+			padding: 2em 2.5em
+		.services-item
+			margin-top: 5em
+		.service__icon
+			margin-bottom: 1em
+		.service__title
+			font-size: 2.8em
+		.service__text
+			font-size: 2.1em
+			max-height: 7.5em
+		
+	.mb-grid, .blog, .grid-blogPost, .content__box
+		grid-template-columns: 1fr
+		grid-gap: 10rem 0
+		.mb__grid-row-1
+			grid-row-start: 1
+		.mb__grid-row-2
+			grid-row-start: 2
+		.mb__grid-row-3
+			grid-row-start: 3
+		.mb__grid-row-4
+			grid-row-start: 4
+		.mb__grid-row-5
+			grid-row-start: 5
+		.mb__grid-row-6
+			grid-row-start: 6
+		.mb__grid-row-7
+			grid-row-start: 7
+		.mb-grid-column-1
+			grid-column: 1 / span 4
+		&__section
+			width: 75rem
+			height: 72rem
+			position: relative
+			overflow: hidden
+			border-radius: 3em
+			.date
+				font-size: 2em
+				bottom: 14.5rem
+			&-title
+				font-size: 2.5em
+				text-align: left
+	.grid-blogPost
+		padding: 0 2.5em
+	.content__box .title-1
+		grid-column: 1
+	.progress__bar:last-child
+		margin-bottom: 5rem
+	.sidebar
+		font-size: 2.5rem
+	.widget__body::after
+		width: 122%
+	.widget__title
+		font-size: 4.4rem
+		text-align: center
+	.recent
+		flex-direction: column
+		align-items: center
+		// height: 27rem
+		// font-size: 2.3rem
+		// margin-top: 5rem
+		// padding-bottom: 5rem
+		height: 19em
+		font-size: 4rem
+		margin-top: 5rem
+		padding-bottom: 5rem
+		border-bottom: 2px #666 dotted
+		&__image
+			width: 50rem
+			height: 45rem
+			margin-right: 0
+			margin-bottom: 1em
+			// border-radius: 1em
+		&__title
+			display: flex
+			height: 22.2rem
+			text-align: center
+			// flex-direction: column
+			// justify-content: space-between
+			// text-align: justify
+		&:last-child
+			margin-bottom: 1.5em
+	.categories
+		font-size: 3rem
+	.categories-item
+		border-bottom: 2px #666 dotted
+	.post
+		.title-1
+			font-size: 4.2em
+		.title-2
+			font-size: 3.5em
+	.post-date-categories
+		font-size: 1.8em
+		line-height: 2.5
+	.post__text
+		font-size: 2.5em
+		line-height: 1.8
+
+
+	.portfolio__section
+		flex-direction: column
+		// flex-direction: column-reverse
+		width: 100%
+		height: 100%
+		margin-left: 0
+		align-items: center
+		&-inner
+			position: static
+			// left: 0
+			width: 71.5rem
+			height: 100%
+			font-size: 2.3em
+			padding: 5.75rem 7rem 3.5rem
+			.title-3
+				margin-bottom: 1em
+			p
+				height: 70%
+				margin-bottom: 1.5em
+				font-size: 1.1em
+				// text-align: justify
+		&-image
+			width: 71.5rem
+			height: 60rem
+	.button
+		font-size: 1em
+		padding-top: .7em
+		margin-bottom: 1em
+
+	.contact
+		margin-bottom: 5em
+	.contact-title
+		font-size: 2.8em
+	.mb-contact-title
+		margin-left: -20%
+	.form
+		font-size: 2.1em
+	.button-red
+		font-size: 2.5em
+		width: 45%
+
+	.contact__info
+		width: 100%
+		height: 100%
+		padding: 0
+		padding-left: 25%
+	.info
+		height: 5em
+		font-size: 1.4em
+		margin-bottom: 5em
+		&::before
+			left: 2em
+	.info + .info
+		margin-top: 0
+
+// // /* Custom, iPhone Retina */
+// @media only screen and (max-width : 320px)
+// 	.transition
+// 		transform: skewX(-40deg) translateX(-75em)
+
+// 	@keyframes anim
+// 		0%
+// 			transform: skewX(-40deg) translateX(-70em)
+// 			z-index: $z-index-max
+
+// 		100%
+// 			transform: skewX(-40deg) translateX(215em)
+// 			z-index: $z-index-max
+

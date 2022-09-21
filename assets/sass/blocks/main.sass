@@ -1,0 +1,82 @@
+//главная
+.main
+	display: flex
+	justify-content: space-between
+	height: calc(100vh - 20em)
+	align-items: center
+	
+	.h1
+		font-size: 5.2em
+		font-weight: 700
+	.h2
+		font-size: 3.2em
+		font-weight: 400
+		letter-spacing: .2em
+	
+	&__person
+		display: flex
+		flex-direction: column
+		align-items: center
+		.h1 + .h2
+			margin-top: 5rem
+//--
+
+// анимация текста
+.printText
+	overflow: hidden
+	border-right: .1em solid $white
+	white-space: nowrap
+	margin: 0 auto
+	animation: typing 15s steps(30, end) infinite, blink-caret 1s 5s step-end infinite
+
+@keyframes typing 
+	from, 10%, to
+		width: 0 
+	35%, 90%
+		width: 100%
+
+@keyframes blink-caret
+	from, to
+		border-color: transparent
+	50%
+		border-color: $white
+//-- анимация текста
+
+//-- соц сети
+.social, .feedback
+	align-items: center
+	list-style-type: none
+	padding-left: 0
+	font-size: 1rem
+	&-link
+		display: block
+		width: 3em
+		height: 3em
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		opacity: .6
+		transition: opacity 0.3s linear
+		&:hover
+			opacity: 1
+	li+li
+		margin-top: 7em
+	&-vk
+		background-image: url(../images/icon/vk.svg)
+	&-fb
+		background-image: url(../images/icon/fb.svg)
+	&-instagram
+		background-image: url(../images/icon/instagram.svg)
+	&-email
+		background-image: url(../images/icon/email.svg)
+	&-smartphone
+		background-image: url(../images/icon/smartphone.svg)
+//--
+
+// фон
+#sky
+	position: fixed
+	top: 0
+	left: 0
+	z-index: -10
+//--
