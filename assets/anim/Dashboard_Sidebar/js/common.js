@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-	// $('body').hide()
+	let navigation = document.querySelector('#navigation')
+	let toggle = document.querySelector('#toggle')
+	toggle.onclick = function() {
+		navigation.classList.toggle('active')
+	}
+	
 
 })
